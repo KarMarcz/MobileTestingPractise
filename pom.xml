@@ -14,6 +14,9 @@
 
         <!--dependecies-->
         <version_appium>7.0.0</version_appium>
+        <version.assertj>3.11.1</version.assertj>
+        <version.selenium>3.141.59</version.selenium>
+        <version.commons-lang3>3.8.1</version.commons-lang3>
     </properties>
     <build>
         <plugins>
@@ -49,6 +52,35 @@
             <groupId>io.appium</groupId>
             <artifactId>java-client</artifactId>
             <version>${version_appium}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${version.assertj}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${version.selenium}</version>
+        </dependency>
+        <!--Available Goals (which are meant to be used together; the only reason they are separated is for code readability):-->
+
+        <!--commons-release:detach-distributions - Remove tar.gz, tar.gz.asc, zip, and zip.asc files from being uploaded-->
+        <!--to nexus and copy them to the target/commons-release-plugin directory.-->
+
+        <!--commons-release:compress-site - Generate site.zip file in the target/commons-release-plugin directory.-->
+        <!--commons-release:stage-distributions - Take all staged files in the target/commons-release-plugin directory,-->
+        <!---->
+        <!--and the RELEASE-NOTES.txt from the root of the project, and commit them to a specified staging subversion repository.-->
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${version.commons-lang3}</version>
         </dependency>
     </dependencies>
 

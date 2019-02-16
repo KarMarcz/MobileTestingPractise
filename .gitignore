@@ -24,6 +24,9 @@
 .idea/**/gradle.xml
 .idea/**/libraries
 
+#Applications
+*.apk
+
 # Maven
 target/
 
