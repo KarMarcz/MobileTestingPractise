@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>MobileTestingPractise</groupId>
+    <artifactId>MobileTestingPractise</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <properties>
+        <!--plugins-->
+        <version.maven-compiler-plugin>3.8.0</version.maven-compiler-plugin>
+        <version.maven-surefire-plugin>2.22.1</version.maven-surefire-plugin>
+
+        <!--dependecies-->
+        <version_appium>7.0.0</version_appium>
+    </properties>
+    <build>
+        <plugins>
+            <!--The Compiler Plugin has two goals. Both are already bound to their proper phases within the Maven Lifecycle and are therefore,-->
+            <!--automatically executed during their respective phases.-->
+            <!--compiler:compile is bound to the compile phase and is used to compile the main source files.-->
+            <!--compiler:testCompile is bound to the test-compile phase and is used to compile the test source files.-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${version.maven-compiler-plugin}</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <!--https://maven.apache.org/surefire/maven-surefire-plugin/examples/junit.html-->
+            <!--<configuration>-->
+            <!--<groups>com.mycompany.SlowTests</groups>-->
+            <!--</configuration>-->
+            <!--The Surefire Plugin has only one goal:-->
+            <!--surefire:test runs the unit tests of an application.-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${version.maven-surefire-plugin}</version>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+        <!--For mobile testing-->
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>${version_appium}</version>
+        </dependency>
+    </dependencies>
+
+
+</project>
